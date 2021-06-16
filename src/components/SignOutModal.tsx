@@ -52,7 +52,7 @@ export const SignOutModal = ({ onClose }: { onClose: () => void }) => {
 
         {sessionParams.length > 0 && (
           <InfoBlock variant={InfoBlockVariant.warning}>
-            <p>
+            <p id = "sign-out-text">
               {`You have session data (${getMessageText()}) that will be lost when you sign out. You can copy the URL to save it.`}
             </p>
             <div className="SessionParamsWrapper">

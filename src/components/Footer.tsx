@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { TextLink, TextLinkVariant, TextButton } from "@stellar/design-system";
 import { Modal } from "components/Modal";
+import { handleToggle2 } from "components/Header";
 import { ConfigurationModal } from "components/ConfigurationModal";
 import { useRedux } from "hooks/useRedux";
 
@@ -12,6 +13,7 @@ export const Footer = () => {
   const handleConfigModalClose = () => {
     setConfigModalVisible(false);
   };
+
 
   return (
     <>
@@ -34,6 +36,12 @@ export const Footer = () => {
             >
               Privacy Policy
             </TextLink>
+        <label id="log-btn" className="pure-material-switch">
+           <input onChange={handleToggle2} type="checkbox" />
+           <span id="toggle-2">
+            <b>Logs</b>
+          </span>
+        </label>
           </div>
 
           {account.isAuthenticated && (

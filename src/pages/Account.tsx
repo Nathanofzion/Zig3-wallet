@@ -10,6 +10,10 @@ import { useRedux } from "hooks/useRedux";
 import { Asset } from "types/types.d";
 
 export const Account = () => {
+  const dthm = document.getElementById('theme-btn')
+  if (dthm != null){
+    dthm.classList.add("mt-4");
+  }
   const { account } = useRedux("account");
   const [sendPaymentModalVisible, setSendPaymentModalVisible] = useState(false);
   const [currentAsset, setCurrentAsset] = useState<Asset | undefined>();

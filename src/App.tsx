@@ -34,36 +34,20 @@ export const App = () => (
         <WarningBanner />
 
         <div id="app-wrapper" className="Wrapper">
-          <div className="SplitContainer Main">
-            <div className="ContentWrapper">
+          <div id="Main" className="SplitContainer Main">
+            <div id="thm" className="ContentWrapper">
               <Header />
-
-              <div className="Announcement">
-                <div className="Inset">
-                  <p>
-                    Welcome to the new and improved Stellar demo wallet! Please
-                    log bugs and feature requests at: &nbsp;
-                    <TextLink
-                      variant={TextLinkVariant.primary}
-                      href="https://github.com/stellar/stellar-demo-wallet/issues"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      https://github.com/stellar/stellar-demo-wallet/issues
-                    </TextLink>
-                  </p>
-                </div>
-              </div>
-
+              <div className="blue-hr"></div>
+              <div className="purple-hr"></div>
               <div className="IntroText Inset">
+                <div className="dashboard">
                 <p>
-                  This demo wallet lets financial application developers test
-                  their integrations and learn how Stellar ecosystem protocols
-                  (SEPs) work.
+                Welcome to the new and improved V 2.0 WEB3 Zig3 wallet! The Zioncoin gen 3 wallet means;
+                You can now Connect to banks from all over the world, with Sep 24 Anchors: &nbsp; 
                 </p>
-              </div>
-
-              <PageContent>
+                </div>
+                <div className="login-options">
+                <PageContent>
                 <Switch>
                   <Route exact path="/">
                     <Landing />
@@ -75,8 +59,50 @@ export const App = () => (
 
                   <Route component={NotFound} />
                 </Switch>
-              </PageContent>
+              </PageContent>        
+                </div>
+              </div>
+              
+              <div className="InstantSwap Inset">
+                <h1>Instant Swap </h1>
+                If you want to, buy Zioncoins or any other coin like USDC, GBZ, XOW, XOV, XOG. what ever coin it its. You can now use instant swap
+                quicky buy or sell that asset with out having to visit the trading desk.
+                
+              </div>
+              <div className="MakeAnOffer Inset">
+              <h1>Make An Offer</h1>
+                It so easy to get Zioncoins at theprize you want if your realistic.
+                Simple make an offer and if the market believes its agood offer it will be accpet; and you'll have Zioncoiuns at the prices you want.
+              </div>
+              <div className="defi Inset">
+                <h1>DeFi</h1>
+                This is where you'll find out about Stake and Cocktails
+              </div>
+              <div className="nft Inset">
+              <h1>Nft's</h1>
+                This is where you'll find out about both IPFS and Cloudflare 
+                stoage if thats how it works.
+              </div>
 
+
+              <div className="Announcement">
+                <div className="Inset">
+                  <p>
+                  
+                    Welcome to the new and improved V 2.0 WEB3 Zig3 wallet! The Zioncoin gen 3 wallet means;
+                    You can now Connect to banks from all over the world, with Sep 24 Anchors: &nbsp;
+                    <TextLink
+
+                      variant={TextLinkVariant.primary}
+                      href="https://zig3.uk"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      https://zig3.uk
+                    </TextLink>
+                  </p>
+                </div>
+              </div>
               <Footer />
             </div>
           </div>

@@ -54,10 +54,10 @@ export const Landing = () => {
 
   return (
     <div className="Inset">
-      <Heading1>Import or generate keypair</Heading1>
+      <Heading1 id = "key-pair">Import or generate keypair</Heading1>
 
-      <div className="LandingButtons">
-        <TextButton
+      <div id = "key-btns" className="LandingButtons">
+        <TextButton id = "key-btn1"
           onClick={() => setIsConnectAccountModalVisible(true)}
           variant={TextButtonVariant.secondary}
           disabled={account.status === ActionStatus.PENDING}
@@ -66,7 +66,7 @@ export const Landing = () => {
         </TextButton>
 
         <div className="Inline">
-          <TextButton
+          <TextButton id = "key-btn2"
             onClick={handleCreateAccount}
             variant={TextButtonVariant.secondary}
             disabled={account.status === ActionStatus.PENDING}

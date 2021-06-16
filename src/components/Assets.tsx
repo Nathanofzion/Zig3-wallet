@@ -335,7 +335,7 @@ export const Assets = ({
       {/* Balances */}
       <div className="Section">
         <div className="Inset">
-          <Heading2>Balances</Heading2>
+          <Heading2 id="bal" >Balances</Heading2>
         </div>
         <div className="Balances">
           <Balance onSend={onSendPayment} onAssetAction={handleAssetAction} />

@@ -13,7 +13,7 @@ p {
 
 code {
   // TODO: color not in SDS
-  color: #490be3;
+  color: rgb(121, 229, 213);
   font-family: var(--font-family-monospace);
   border-radius: 0.1875rem;
   border: 0.5px solid var(--color-background-off);
@@ -27,7 +27,7 @@ code {
 }
 
 @mixin header-footer-inset {
-  height: 3rem;
+  height: 5rem;
   display: flex;
   align-items: center;
 }
@@ -44,7 +44,8 @@ code {
 }
 
 .SplitContainer {
-  width: 50%;
+  display: flex;
+  width: 100%;
   position: relative;
 }
 
@@ -60,12 +61,12 @@ code {
 }
 
 .Announcement {
-  background-color: var(--color-note);
+  background-color: rgba(255,255,255, 0.0);
   color: var(--color-text-contrast);
   text-align: center;
   width: 100%;
   margin-bottom: 2rem;
-  padding: 1rem 0; //vertical padding
+  padding: 10rem 0;  //vertical padding
   // change anchor text to reflect same color as the rest of the announcment
   .TextLink {
     color: inherit;
@@ -74,6 +75,8 @@ code {
 
 .Main {
   background-color: var(--color-background-main);
+  transition: all 0.5s;
+  overflow: hidden;
 }
 
 .Inset {
@@ -93,6 +96,8 @@ code {
     @include header-footer-inset;
     justify-content: space-between;
   }
+  display: flex;
+  flex-shrink: 1;
 }
 
 .Footer {
@@ -106,11 +111,135 @@ code {
       margin-right: 1.5rem;
     }
   }
+  display: flex;
+  flex-shrink: 1;
 }
 
 .IntroText {
-  margin-bottom: 3rem;
+  background: rgba(14, 9, 9, 0);
+  min-height: 30vh;
+  width: 1200px;
+  top: 30px;
+  border-radius: 2;
+  box-shadow: 0 3px 10px rgba(0,0,0,5);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 70px;
+  background: linear-gradiant(
+    to right bottom,
+    rgba(148, 78, 206, 0.9),
+    rgba(121, 229, 213, 0.8), 
+  );
+   border-radius: 2rem;
+   z-index: 1;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   flex-shrink: 1;
+   
+}  
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradiant(
+    to right top,
+    rgb(148, 78, 206),
+    rgb(121, 229, 213), 
+  );
+  border-radius: 2rem;
 }
+.login-options {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space;
+}
+
+.InstantSwap {
+  background: rgba(255, 255, 255, 0);
+  min-height: 30vh;
+  width: 500px;
+  top: 50px;
+  right: 5px;
+  left: -255px;
+  border-radius: 2;
+  box-shadow: 0 3px 10px rgba(0,0,0,5);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 70px;
+  border-radius: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+} 
+.MakeAnOffer {
+  background: rgba(255, 255, 255, 0);
+  min-height: 30vh;
+  width: 500px;
+  top: -250px;
+  right: 5px;
+  height: 100px;
+  left: 300px;
+  border-radius: 2;
+  box-shadow: 0 3px 10px rgba(0,0,0,5);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 70px;
+  border-radius: 2rem;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+} 
+
+.defi {
+  background: rgba(14, 9, 9, 0);
+  min-height: 30vh;
+  width: 1200px;
+  top:-230px;
+  border-radius: 2;
+  box-shadow: 0 3px 10px rgba(0,0,0,5);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 70px;
+  background: linear-gradiant(
+    to right bottom,
+    rgba(148, 78, 206, 0.9),
+    rgba(121, 229, 213, 0.8), 
+  );
+   border-radius: 2rem;
+   z-index: 1;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   flex-shrink: 1;
+}
+
+.nft {
+  background: rgba(14, 9, 9, 0);
+  min-height: 30vh;
+  width: 1200px;
+  top: -210px;
+  border-radius: 2;
+  box-shadow: 0 3px 10px rgba(0,0,0,5);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 70px;
+  background: linear-gradiant(
+    to right bottom,
+    rgba(148, 78, 206, 0.9),
+    rgba(121, 229, 213, 0.8), 
+  );
+   border-radius: 2rem;
+   z-index: 1;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   flex-shrink: 1;
+}   
 
 .LandingButtons {
   button {
@@ -438,4 +567,340 @@ code {
   & > * {
     margin-right: 1rem;
   }
+}
+
+/*All CSS for Theme/Logs/Nav Bar*/
+.ham {
+  font-size: 2rem;
+  opacity: 0.4;
+  margin-right: -1.5rem;
+  cursor: pointer;
+}
+#log-title {
+  display: none;
+}
+#logs {
+  width: 0;
+  transition: width 0.5s ease;
+}
+#logs1 {
+  width: 0;
+  transition: width 0.5s ease;
+}
+#wrap-log {
+  display: none;
+}
+#item-nav {
+  text-decoration: none;
+  color: rgb(241, 237, 237);
+}
+.sidenav {
+  height: 100%;
+  position: fixed;
+  width: 27%;
+  margin-left: -22rem;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  /*background-color: rgb(65, 61, 61);*/
+  background-color: #f5f6f7;
+  font-size: 0.9em;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: all 0.5s;
+}
+#mySidenav {
+  margin-left: -22rem;
+  overflow-y: hidden;
+}
+#openNav2 {
+  display: none;
+}
+.sidenav a {
+  margin-top: 25px;
+  font-size: 12px;
+  padding-top: 4px;
+  margin-left: 1rem;
+  color: #3d4449;
+  line-height: 20px;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  font-family: "Roboto Slab";
+  font-weight: 600;
+  display: block;
+  transition: 0.2s;
+}
+.sidenav a:hover {
+  color: #79e5d5;
+}
+
+.closebtn {
+  position: absolute;
+  top: 1.7rem;
+  color: black;
+  right: 1rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  margin-left: 50px;
+  background: none;
+  border: none;
+}
+hr {
+  margin-left: 17px;
+  width: 18rem;
+  height: 2px;
+  margin-top: 13px;
+  color: grey;
+}
+.menu {
+  position: absolute;
+  top: 2.4rem;
+  left: 1rem;
+  font-size: 21px;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  line-height: 28px;
+}
+.menu-hr {
+  width: 4rem;
+  background: #4ccec8;
+  height: 0.2rem;
+  margin-left: 15px;
+  margin-top: 7px;
+}
+.menu-hr-purple {
+  width: 4rem;
+  background: rgb(148, 78, 206);
+  height: 0.3rem;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+.contact-hr {
+  width: 7.5rem;
+  background: #4ccec8;
+  height: 0.2rem;
+  margin-left: 15px;
+  margin-top: 7px;
+}
+.contact-hr-purple {
+  width: 7.5rem;
+  background: #944ece;
+  height: 0.3rem;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+#menu-end-hr {
+  margin-left: 17px;
+  margin-top: 50px;
+  width: 18rem;
+  height: 2px;
+  color: grey;
+}
+.contact {
+  position: absolute;
+  top: 27.7rem;
+  left: 1rem;
+  font-size: 21px;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  line-height: 28px;
+}
+.contact-footer1 {
+  color: #7f888f;
+  padding: 18px;
+}
+.pure-material-switch {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: rgb(39, 36, 36);
+  font-family: var(
+    --pure-material-font,
+    "Roboto",
+    "Segoe UI",
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Input */
+.pure-material-switch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(39, 36, 36);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+
+/* Span */
+.pure-material-switch > span {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Track */
+.pure-material-switch > span::before {
+  content: "";
+  float: right;
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 7px;
+  width: 36px;
+  height: 14px;
+  background-color: rgb(39, 36, 36);
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+/* Thumb */
+.pure-material-switch > span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Checked */
+.pure-material-switch > input:checked {
+  right: -10px;
+  background-color: rgb(121, 229, 213);
+}
+
+.pure-material-switch > input:checked + span::before {
+  background-color: rgb(121, 229, 213);
+}
+
+.pure-material-switch > input:checked + span::after {
+  background-color: rgb(121, 229, 213);
+  transform: translateX(16px);
+}
+
+/* Hover, Focus */
+.pure-material-switch:hover > input {
+  opacity: 0.04;
+}
+
+.pure-material-switch > input:focus {
+  opacity: 0.12;
+}
+
+.pure-material-switch:hover > input:focus {
+  opacity: 0.16;
+}
+
+/* Active */
+.pure-material-switch > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.pure-material-switch > input:active + span::before {
+  background-color: rgb(121, 229, 213);
+}
+
+.pure-material-switch > input:checked:active + span::before {
+  background-color: rgb(39, 36, 36);
+}
+
+/* Disabled */
+.pure-material-switch > input:disabled {
+  opacity: 0;
+}
+
+.pure-material-switch > input:disabled + span {
+  color: rgb(39, 36, 36);
+  opacity: 0.38;
+  cursor: default;
+}
+
+.pure-material-switch > input:disabled + span::before {
+  background-color: rgb(39, 36, 36);
+}
+
+.pure-material-switch > input:checked:disabled + span::before {
+  background-color: rgb(121, 229, 213);
+}
+
+.dark {
+  background-color: rgb(39, 36, 36);
+  color: #ffff;
+}
+#dark-logo {
+  display: none;
+}
+#plogo {
+  margin-right: 70%;
+  transition: all 0.5s;
+  margin-top: -4px;
+}
+.mt-4{
+  margin-left:-4rem;
+}
+
+/*purple and blue horizontals*/
+.blue-hr {
+  margin-bottom: 14px;
+  width: 99%;
+  margin-top: -5px;
+  margin-left: 10px;
+  height: 4px;
+  position: absolute;
+  top: 10.5%;
+  background: #79e5d5;
+}
+.purple-hr {
+  margin-bottom: 14px;
+  width: 99%;
+  margin-left: 10px;
+  margin-top: -11px;
+  height: 8px;
+  position: absolute;
+  top: 12%;
+  background: rgb(148, 78, 206);
+}
+.ModalWrapper {
+  width: 100%;
+}
+.logo-img{
+  margin-left: 2rem;
+  width: 41%;
+  margin-top: -2px;
+}
+#sign-out{
+  margin-top: -7px;
+}
+#sign-out-text{
+  color:rgb(148, 78, 206);
+}
+#mbdy{
+  color:#111;
 }

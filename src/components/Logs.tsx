@@ -82,9 +82,9 @@ export const Logs = () => {
 
   if (!account.isAuthenticated) {
     return (
-      <div className="SplitContainer Logs">
+      <div id = "logs" className="SplitContainer Logs">
         <div className="ContentWrapper">
-          <div className="EmptyLogsContent">
+          <div id = "log-title" className="EmptyLogsContent">
             Operation logs will appear here once a transaction begins
           </div>
         </div>
@@ -93,11 +93,11 @@ export const Logs = () => {
   }
 
   return (
-    <div className="SplitContainer Logs">
+    <div id = "logs1" className="SplitContainer Logs">
       <div className="LogsWrapper">
-        <div className="ContentWrapper">
+        <div id = "wrap-log" className="ContentWrapper">
           <div className="Inset">
-            <div className="LogsContent">
+            <div id = "log-content" className="LogsContent">
               {logs.items.length ? (
                 logs.items.map((log: LogItemProps) => (
                   <LogItem
@@ -115,7 +115,7 @@ export const Logs = () => {
         </div>
       </div>
 
-      <div className="LogsFooter">
+      <div id = "log-footer" className="LogsFooter">
         <div className="Inset horizontal-spacing">
           <TextButton onClick={handleDownload} disabled={!logs.items.length}>
             Download logs
